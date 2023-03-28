@@ -1,0 +1,1 @@
+This README contains task on pointers, arrays and strings project.
