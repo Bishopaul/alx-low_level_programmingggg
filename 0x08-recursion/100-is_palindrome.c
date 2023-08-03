@@ -11,11 +11,11 @@
 int _strlen(char *s)
 {
 	int name = 0;
-	
+
 	if (*s)
 	{
-		name ++;
-		name += _strlen (s + 1);
+		name++;
+		name += _strlen(s + 1);
 	}
 	return (name);
 }
