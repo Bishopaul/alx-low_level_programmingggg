@@ -2,39 +2,40 @@
 #include <stdlib.h>
 
 /**
- * Main - adds two numbers
- * @argc: argument count
- * @argv: argument
- * Return: 0
+ * main - Program that adds positive numbers
+ *
+ * @argc: Argument count
+ * @argv: Argument
+ *
+ * Return: 0 if Error, 1 for success
  */
 
-int main(int argc, char **argv)
+int main(int argc, char *argv[])
 {
-	int m, n, sum = 0;
-	char *v;
+	int a, b, sum = 0;
+	char *c;
 
-if (argc < 2)
-{
-printf("0\n");
-return (0);
-}
+	if (argc < 2)
+	{
+		printf("0\n");
+		return (0);
+	}
 
+	for (a = 1; argv[a]; a++)
+	{
+		b = strtol(argv[a], &c, 10);
 
-for (m = 1; argv[m]; m++)
-{
-n = strtol(argv[m], &v, 10);
-if (*v)
-{
-printf("Error\n");
-return (1);
-}
-else
-{
-sum += n;
-}
-}
-printf("%d\n", sum);
+		if (*c)
+		{
+			printf("Error\n");
+			return (1);
+		}
 
-
-return (0);
+		else
+		{
+			sum += b;
+		}
+	}
+	printf("%d\n", sum);
+	return (0);
 }
