@@ -31,10 +31,14 @@ char *str_concat(char *s1, char *s2)
 		return (NULL);
 
 	for (i = 0; s1[i]; i++)
+	{
 		array[index] = s1[index];
+	}
 
 	for (i = 0; s2[i]; i++)
+	{
 		array[index] = s2[index];
+	}
 
 	return (array);
 }
